@@ -1,0 +1,6 @@
+[submodule "rank-reid"]
+	path = rank-reid
+	url = https://github.com/ahangchen/rank-reid
+[submodule "TrackViz"]
+	path = TrackViz
+	url = https://github.com/ahangchen/TrackViz
