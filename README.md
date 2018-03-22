@@ -9,6 +9,8 @@ CVPR2018: Unsupervised Cross-dataset Person Re-identification by Transfer Learni
 
 - We propose a learning-to-rank based  mutual promotion procedure, which uses the fusion classifier to teach the weaker visual classifier by the ranking results on unlabeled dataset. This mutual learning mechanism can be applied to many domain adaptation problems.
 
+## How to use
+wait for supplement
 
 ## Citation
 
