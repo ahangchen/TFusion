@@ -35,12 +35,17 @@ Written and tested in python2.
 
 #### Pre-process
 - CUHK01
+
 we only use CUHK01 as source dataset, so we use all images for pretrain, place all images in a directory.
 
 - VIPeR
+
 the same as CUHK01.
+
 - GRID as Source dataset
+
 we use all labeled images in GRID for pretraining as source dataset, so place all labeled images in a directory, for example "grid_label"
+
 - Market-1501 
   - download
   - rename training directory to 'train', rename probe directory to 'probe', renmae gallery directory to 'test'
@@ -109,7 +114,7 @@ grid_train_probe_gallery
 
 ```
 
-Place all dataset in the same directory, like this:
+Place all datasets in the same directory, like this:
 
 ```bash
 dataset
@@ -123,7 +128,6 @@ dataset
 - Pretrain Config: Modify all path containing '/home/cwh' appearing in rank-reid/pretrain/pair_train.py  to your corresponding path.
 - Fusion Config 
   - Modify all path containing '/home/cwh' appearing in TrackViz/ctrl/transfer.py  to your corresponding path.
-
   - Modify all path containing '/home/cwh' appearing in rank-reid/rank-reid.py  to your corresponding path.
 
 ### Pretrain
