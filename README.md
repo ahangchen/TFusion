@@ -10,13 +10,28 @@ CVPR2018: Unsupervised Cross-dataset Person Re-identification by Transfer Learni
 - We propose a learning-to-rank based  mutual promotion procedure, which uses the fusion classifier to teach the weaker visual classifier by the ranking results on unlabeled dataset. This mutual learning mechanism can be applied to many domain adaptation problems.
 
 ## How to use
+We split TFusion into two components:
+
+- rank-reid
+  - Framework: Keras and Tensorflow
+  - Training Resnet based Siamese network on source dataset
+  - Learning to rank on target dataset
+- TrackViz
+  - Dependencies: Some traditional libraries, including numpy, pickle, matplotlib, seaborn
+  - Building spatial temporal model with visual classification results
+  - Bayesian Fusion
+
+Components communicate by ranking results. We use this results for visualization and logical analysis in our experiments, thus we save them on file system in TrackViz/data. 
+
+Written and tested in python2.
+
 ### Dataset
 #### Download
  - [CUHK01](http://www.ee.cuhk.edu.hk/~xgwang/CUHK_identification.html)
  - [VIPeR](https://vision.soe.ucsc.edu/node/178)
  - [Market-1501](http://www.liangzheng.org/Project/project_reid.html)
  - [GRID](http://personal.ie.cuhk.edu.hk/~ccloy/downloads_qmul_underground_reid.html)
-- 
+
 
 #### Pre-process
 - CUHK01
