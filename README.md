@@ -96,12 +96,12 @@ grid_train_probe_gallery
 │   │   ├── 0000_1_26113_116_13_72_212.jpeg
 │   │   ├── 0000_1_26207_113_25_69_172.jpeg
 │   │   └── gallery.txt
-│   ├── train
-│   │   ├── 0001_1_25004_107_32_106_221.jpeg
-│   │   ├── 0001_2_25023_116_134_128_330.jpeg
-│   │   ├── 0009_1_25208_126_19_71_215.jpeg
-│   │   ├── 0009_2_25226_176_72_87_246.jpeg
-│   │   └── 0248_5_33193_101_100_90_308.jpeg
+│   └── train
+│       ├── 0001_1_25004_107_32_106_221.jpeg
+│       ├── 0001_2_25023_116_134_128_330.jpeg
+│       ├── 0009_1_25208_126_19_71_215.jpeg
+│       ├── 0009_2_25226_176_72_87_246.jpeg
+│       └── 0248_5_33193_101_100_90_308.jpeg
 ├── cross1
 ├── cross2
 ├── cross3
@@ -185,7 +185,7 @@ cd TrackViz && python ctrl/transfer.py
 
 Results will be saved in TrackViz/data
 
-```shell
+```bash
 TrackViz/data
 ├── source_target-r-test # transfer after learning to rank on test set
 │   ├── cross_filter_pid.log
