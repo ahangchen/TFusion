@@ -10,22 +10,42 @@ CVPR2018: Unsupervised Cross-dataset Person Re-identification by Transfer Learni
 - We propose a learning-to-rank based  mutual promotion procedure, which uses the fusion classifier to teach the weaker visual classifier by the ranking results on unlabeled dataset. This mutual learning mechanism can be applied to many domain adaptation problems.
 
 ## How to use
+We split TFusion into two components:
+
+- rank-reid
+  - Framework: Keras and Tensorflow
+  - Training Resnet based Siamese network on source dataset
+  - Learning to rank on target dataset
+- TrackViz
+  - Dependencies: Some traditional libraries, including numpy, pickle, matplotlib, seaborn
+  - Building spatial temporal model with visual classification results
+  - Bayesian Fusion
+
+Components communicate by ranking results. We use this results for visualization and logical analysis in our experiments, thus we save them on file system in TrackViz/data. 
+
+Written and tested in python2.
+
 ### Dataset
 #### Download
  - [CUHK01](http://www.ee.cuhk.edu.hk/~xgwang/CUHK_identification.html)
  - [VIPeR](https://vision.soe.ucsc.edu/node/178)
  - [Market-1501](http://www.liangzheng.org/Project/project_reid.html)
  - [GRID](http://personal.ie.cuhk.edu.hk/~ccloy/downloads_qmul_underground_reid.html)
-- 
+
 
 #### Pre-process
 - CUHK01
+
 we only use CUHK01 as source dataset, so we use all images for pretrain, place all images in a directory.
 
 - VIPeR
+
 the same as CUHK01.
+
 - GRID as Source dataset
+
 we use all labeled images in GRID for pretraining as source dataset, so place all labeled images in a directory, for example "grid_label"
+
 - Market-1501 
   - download
   - rename training directory to 'train', rename probe directory to 'probe', renmae gallery directory to 'test'
@@ -76,12 +96,12 @@ grid_train_probe_gallery
 │   │   ├── 0000_1_26113_116_13_72_212.jpeg
 │   │   ├── 0000_1_26207_113_25_69_172.jpeg
 │   │   └── gallery.txt
-│   ├── train
-│   │   ├── 0001_1_25004_107_32_106_221.jpeg
-│   │   ├── 0001_2_25023_116_134_128_330.jpeg
-│   │   ├── 0009_1_25208_126_19_71_215.jpeg
-│   │   ├── 0009_2_25226_176_72_87_246.jpeg
-│   │   └── 0248_5_33193_101_100_90_308.jpeg
+│   └── train
+│       ├── 0001_1_25004_107_32_106_221.jpeg
+│       ├── 0001_2_25023_116_134_128_330.jpeg
+│       ├── 0009_1_25208_126_19_71_215.jpeg
+│       ├── 0009_2_25226_176_72_87_246.jpeg
+│       └── 0248_5_33193_101_100_90_308.jpeg
 ├── cross1
 ├── cross2
 ├── cross3
@@ -94,7 +114,7 @@ grid_train_probe_gallery
 
 ```
 
-Place all dataset in the same directory, like this:
+Place all datasets in the same directory, like this:
 
 ```bash
 dataset
@@ -108,7 +128,6 @@ dataset
 - Pretrain Config: Modify all path containing '/home/cwh' appearing in rank-reid/pretrain/pair_train.py  to your corresponding path.
 - Fusion Config 
   - Modify all path containing '/home/cwh' appearing in TrackViz/ctrl/transfer.py  to your corresponding path.
-
   - Modify all path containing '/home/cwh' appearing in rank-reid/rank-reid.py  to your corresponding path.
 
 ### Pretrain
@@ -166,7 +185,7 @@ cd TrackViz && python ctrl/transfer.py
 
 Results will be saved in TrackViz/data
 
-```shell
+```bash
 TrackViz/data
 ├── source_target-r-test # transfer after learning to rank on test set
 │   ├── cross_filter_pid.log
