@@ -23,9 +23,11 @@ We split TFusion into two components:
   - Building spatial temporal model with visual classification results
   - Bayesian Fusion
 
-Components communicate by ranking results. We use this results for visualization and logical analysis in our experiments, thus we save them on file system in TrackViz/data. 
+Components communicate by ranking results(those \*.log files ). We use this results for visualization and logical analysis in our experiments, thus we save them on file system in TrackViz/data. 
 
 Written and tested in python2.
+
+>Attention: make sure you are using the repos with commit id specified in TFusion. You should use TrackViz@5a5c8a0 and rank-reid@b228897 because the master branches of TrackViz and rank-reid are under developing, so you will meet some errors if you use other version repos.
 
 ### Dataset
 #### Download
