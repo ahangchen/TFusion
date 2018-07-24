@@ -27,7 +27,7 @@ Components communicate by ranking results(those \*.log files ). We use this resu
 
 Written and tested in python2.
 
->Attention: make sure you are using the repos with commit id specified in TFusion. You should use TrackViz@5a5c8a0 and rank-reid@b228897 because the master branches of TrackViz and rank-reid are under developing, so you will meet some errors if you use other version repos.
+>Attention: make sure you are using the repos with the version specified in TFusion. You should use TrackViz@5a5c8a0 and rank-reid@b228897 because the master branches of TrackViz and rank-reid are under developing for other work. You are possible to meet some errors if you use other version repos.
 
 ### Dataset
 #### Download
