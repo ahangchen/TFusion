@@ -25,7 +25,7 @@ We split TFusion into two components:
 
 Components communicate by ranking results(those \*.log files ). We use this results for visualization and logical analysis in our experiments, thus we save them on file system in TrackViz/data. 
 
-Written and tested in python2.
+Written and tested in python2, keras2.1.5, tensorflow 1.4.
 
 >Attention: make sure you are using the repos with the version specified in TFusion. You should use TrackViz@5a5c8a0 and rank-reid@b228897 because the master branches of TrackViz and rank-reid are under developing for other work. You are possible to meet some errors if you use other version repos.
 
