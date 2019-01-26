@@ -243,10 +243,32 @@ Evaluation result will be automatically saved in the log_path, as you specified 
 Please cite this paper in your publications if it helps your research:
 
 ```bib
-@article{
-  title={Unsupervised Cross-dataset Person Re-identification by Transfer Learning of Spatial-Temporal Patterns},
-  author={Jianming, Lv and Weihang, Chen and Qing, Li and Can, Yang},
-  journal={CVPR},
-  year={2018}
+@inproceedings{DBLP:conf/cvpr/LvCLY18,
+  author    = {Jianming Lv and
+               Weihang Chen and
+               Qing Li and
+               Can Yang},
+  title     = {Unsupervised Cross-Dataset Person Re-Identification by Transfer Learning
+               of Spatial-Temporal Patterns},
+  booktitle = {2018 {IEEE} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018},
+  pages     = {7948--7956},
+  year      = {2018},
+  crossref  = {DBLP:conf/cvpr/2018},
+  url       = {http://openaccess.thecvf.com/content\_cvpr\_2018/html/Lv\_Unsupervised\_Cross-Dataset\_Person\_CVPR\_2018\_paper.html},
+  doi       = {10.1109/CVPR.2018.00829},
+  timestamp = {Mon, 07 Jan 2019 17:17:41 +0100},
+  biburl    = {https://dblp.org/rec/bib/conf/cvpr/LvCLY18},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@proceedings{DBLP:conf/cvpr/2018,
+  title     = {2018 {IEEE} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018},
+  publisher = {{IEEE} Computer Society},
+  year      = {2018},
+  url       = {http://openaccess.thecvf.com/CVPR2018.py},
+  timestamp = {Mon, 07 Jan 2019 12:43:48 +0100},
+  biburl    = {https://dblp.org/rec/bib/conf/cvpr/2018},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```    
